@@ -1,0 +1,227 @@
+1.<iframe src="https://pl.kotl.in/X0xvSR7Yk?theme=darcula&readOnly=true"></iframe>
+
+2.https://pl.kotl.in/X0xvSR7Yk?theme=darcula&readOnly=true
+
+3.fun main() {
+    println("Hello, world!")
+
+    val popcorn = 5
+    val hotdog = 7
+    var customers = 10
+    customers = 8
+    println(customers)
+    
+    var persons = 10
+    println("There are $persons customers")
+    println("There are ${persons+1} customers")
+    
+    val name = "Aravind"
+    val age = 24
+    println("$name is $age years old")
+    
+    var people = 10
+    people = people + 3
+    people+=7
+    people-=3
+    people*=2
+    people/=3
+    println(people)
+    
+    val d: Int
+        d=3
+    val e: String = "hello"
+    println(d)
+    println(e)
+    
+    val a:Int = 100
+    val b:Long = 100_000_000
+    val c:String = "Hello World"
+    val g:Double = 3.1425
+    val h:Boolean = false
+    val i:Char = '\n'
+    println(a)
+  
+    val readonlyshapes = listOf("triangle", "square", "circle")
+    println(readonlyshapes)
+    val shapes:MutableList<String> = mutableListOf("triangle", "square", "circle")
+    println(shapes)
+    val shapeslocked:List<String> = shapes
+    
+    println("The first item in the list is: ${readonlyshapes[0]}")
+    println("The first item in the list is: ${readonlyshapes.first()}")
+    println("The last item in the list is: ${readonlyshapes.last()}")
+    
+    println("This list has ${readonlyshapes.count()} items")
+    println("circle" in readonlyshapes)
+    shapes.add("pentagon")
+    println(shapes)
+    shapes.remove("pentagon")
+    println(shapes)
+    
+    val readonlyfruit = setOf("apple", "banana", "cherry", "cherry")
+    val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
+    println(readonlyfruit)
+    val fruitlocked: Set<String> = fruit
+    println("This set has ${readonlyfruit.count()} items")
+    println("banana" in readonlyfruit)
+    fruit.add("dragonfruit")
+    println(fruit)
+    fruit.remove("dragonfruit")
+    println(fruit)
+    
+    val readonlyjuice = mapOf("apple" to 100, "kiwi" to 150, "orange" to 200)
+    println(readonlyjuice)
+    val juice: MutableMap<String, Int> = mutableMapOf("apple" to 100, "kiwi" to 150, "orange" to 200)
+    println(juice)
+    val juicelocked:Map<String, Int> = juice
+    println("The value of apple is: ${readonlyjuice["apple"]}")
+    println("This map has ${readonlyjuice.count()} key value pairs")
+    juice.put("grapes", 50)
+    println(juice)
+    juice.remove("grapes")
+    println(juice)
+    println(readonlyjuice.containsKey("kiwi"))
+    println(readonlyjuice.keys)
+    println(readonlyjuice.values)
+    println("apple" in readonlyjuice.keys)
+    println(200 in readonlyjuice.values)
+    
+    val greennumbers= listOf(1,3,5)
+    val rednumbers= listOf(2,4,6)
+    val totalcount = greennumbers.count() + rednumbers.count()
+    println(totalcount)
+    
+    val supported = setOf("HTTP", "HTTPS", "FTP")
+    val requested = "smtp"
+    val issupported = requested.uppercase() in supported
+    println("support for $requested: $issupported")
+    
+    val num2word = mapOf(1 to "one", 2 to "two", 3 to "three")
+    val n=2
+    println("$n is spelt as '${num2word[n]}'")
+    
+    val m: Int
+    val check = true
+    if (check){
+        m=1
+    }else{m=2}
+    println(m)
+    
+    val p=1
+    val o=2
+    println(if(p>o) p else o)
+    
+    val obj = "Hello"
+    when (obj) {
+        "1" -> println("one")
+    	"Hello" -> println("greeting")
+    	else -> println("unknown")
+    }
+    
+    val ob = "Hello"
+    val result= when(ob) {
+        "1" -> "one"
+        "Hello" -> "greeting"
+        else -> "unknown"
+    }
+    println(result)
+    
+    val temp=18
+    val describe = when {
+        temp <0 -> "very cold"
+        temp <10 -> "a bit cold"
+        temp <20 -> "warm"
+        else -> "hot"
+    }
+    println(describe)
+    
+    for (number in 1..5){
+        print(number)
+    }
+    
+    val cakes = listOf("carrot", "cheese", "chocolate")
+    for (cake in cakes) {
+        println("yummy, it's a $cake cake")
+    }
+    
+    var cakeseaten = 0
+    while (cakeseaten < 3) {
+        println("Eat a cake")
+        cakeseaten++
+    }
+    
+    var cakeseated = 0
+    var cakesbaked =0
+    while (cakeseaten<3){
+        println("eat a cake")
+    }
+    do{
+        println("bake a cake")
+        cakesbaked++
+    }
+    while (cakesbaked<cakeseaten)
+    
+    val button = "A"
+    println(
+    when(button){
+        "A" -> "yes"
+        "B" -> "no"
+        "x" -> "menu"
+        "y" -> "nothing"
+        else -> "There is no such button"
+    })
+    
+    var pizza = 0
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There's only $pizza slices of pizza.")
+    pizza++
+    println("There are $pizza slices of pizza. we have a whole pizza!")
+    
+    var pizzaslices = 0
+    while (pizzaslices <7){
+        pizzaslices++
+        println("There's only $pizzaslices slices of pizza.")
+    }
+    pizzaslices++
+    println("There are $pizzaslices slices of pizza. We have a whole pizza!")
+    
+    var pizzaslice=0
+    pizzaslice++
+    do{
+        println("There's only $pizzaslice slices of pizza")
+        pizzaslice++
+    }
+    while(pizzaslice<8)
+    println("There are $pizzaslice slices of pizza. We have a whole pizza!")
+    
+    for (num in 1..100){
+        println(
+        when{
+            num % 15 ==0 -> "fizzbuzz"
+            num % 3 ==0 -> "fizz"
+            num % 5 ==0 -> "buzz"
+            else -> num.toString()
+            }
+        )
+    }
+    
+    val words = listOf("ant", "bat", "cat")
+    for (w in words){
+        if(w.startsWith("c"))
+        println(w)
+    }
+ 
+    }
+   

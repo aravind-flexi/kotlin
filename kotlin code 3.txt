@@ -1,0 +1,86 @@
+<iframe src="https://pl.kotl.in/iOG2xJwtO?theme=darcula&readOnly=true"></iframe>
+
+https://pl.kotl.in/iOG2xJwtO?theme=darcula&readOnly=true
+
+https://pl.kotl.in/AKVU69Blr
+
+import kotlin.random.Random
+class contact(val id: Int, var email:String){
+    fun printId(){
+        println(id)
+    }
+}
+data class user (val name:String, val id:Int)
+data class Employee(val name:String, var salary:Int)
+class RandomEmployeeGenerator(var minSalary:Int, var maxSalary:Int){
+    val names= listOf("arun","balu","leo","teddy","max")
+    fun generateEmployee()= Employee(names.random(),Random.nextInt(from=minSalary,until=maxSalary))
+}
+ fun describeString(maybeString: String?): String {
+    if (maybeString != null && maybeString.length > 0) {
+        return "String of length ${maybeString.length}"
+    } else {
+        return "Empty or null string"
+    }
+}
+ fun lengthstring(maybestring:String?):Int?=maybestring?.length
+//data class Employee(val name:String, var Salary:Int)
+fun employeeById(id:Int) = when(id){
+    1->Employee("Mary",20)
+    2->null
+    3->Employee("John",21)
+    4->Employee("ANN",23)
+    else->null
+}
+fun salaryById(id:Int)=employeeById(id)?.salary?:0
+fun main(){
+    val contact = contact(1,"aravind@gmail.com")
+    println(contact.email)
+    contact.email = "aravindbabu663@gmail.com"
+    println(contact.email)
+    println("My email id is ${contact.email}")
+    contact.printId()
+    val user =user("alex",1)
+    println(user)
+    val seconduser = user("alex",1)
+    val thirduser = user("max",2)
+    println("user==seconduser: ${user==seconduser}")
+    println("user==thirduser: ${user==thirduser}")
+    println(user.copy())
+    println(user.copy("MAX"))
+    println(user.copy(id=2))
+    val emp=Employee("Aravind",20)
+    println(emp)
+    emp.salary +=10
+    print(emp)
+    val empGen= RandomEmployeeGenerator(10,30)
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    empGen.minSalary =50
+    empGen.maxSalary = 100
+    println(empGen.generateEmployee())
+    var nevernull:String="Hi! I am aravind"
+    //nevernull=null
+    var nullable:String? ="I am from India"
+    nullable=null
+    var inferrednonnull="The compiler assumes non nullable"
+   //inferednonnull=null
+   fun strlength(notnull:String):Int{
+       return notnull.length
+   }
+   println(strlength(nevernull))
+   //println(strlength(nullable))
+
+var nullString: String? = null
+println(describeString(nullString))
+
+var nullstring:String?=null
+    println(lengthstring(nullstring))
+    
+println(nullstring?.uppercase())
+
+println(nullstring?.length?:0)
+
+println((1..5).sumOf{id -> salaryById(id)})
+}

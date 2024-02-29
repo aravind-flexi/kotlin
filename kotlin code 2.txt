@@ -1,0 +1,92 @@
+<iframe src="https://pl.kotl.in/Agn69LH5b?theme=darcula&readOnly=true"></iframe>
+
+https://pl.kotl.in/Agn69LH5b?theme=darcula&readOnly=true
+
+https://pl.kotl.in/JCh-uJYGE
+
+import kotlin.math.PI
+fun hello() {
+    return println("Hello, world!")
+}
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+fun printMessageWithPrefix(message: String, prefix: String) {
+    println("[$prefix] $message")
+}
+fun printMessagesithPrefix(message:String, prefix:String = "Info"){
+    println("[$prefix] $message")
+}
+fun printmessage(message:String){
+    println(message)
+}
+fun add(x:Int,y:Int):Int{
+    return x+y
+}
+
+fun circleArea(radius:Int):Double{
+    return PI*radius*radius
+}
+fun intervalinseconds(hours:Int=0,minutes:Int=0,seconds:Int=0)=((hours*60)+minutes)*60+seconds
+fun uppercasestring(string:String):String{
+    return string.uppercase()
+}
+val uppercasestring:(String)->String = {string->string.uppercase()}
+fun toseconds(time:String):(Int)->Int = when(time){
+    "hour"->{value->value*60*60}
+    "minute"->{value->value*60}
+    "second"->{value->value}
+    else -> {value->value}
+}
+    fun repeatN(n:Int,action:()->Unit){
+	for (i in 1..n){
+	action()}
+    
+}
+fun main() {
+    hello()
+    println(sum(1, 2))
+    printMessageWithPrefix(prefix = "Log", message = "Hello")
+    printMessageWithPrefix("Hello", "Log")
+    printMessagesithPrefix("Hello")
+    printMessagesithPrefix(prefix="Log", message = "Hello")
+    printmessage("hello")
+    println(add(2,3))
+    println(circleArea(2))
+    println(intervalinseconds(1,20,15))
+    println(intervalinseconds(minutes=1,seconds=25))
+    println(intervalinseconds(hours=2))
+    println(intervalinseconds(minutes=10))
+    println(intervalinseconds(hours=1,seconds=1))
+    println(uppercasestring("hello"))
+    println({string:String -> string.uppercase()}("hello"))
+    val uppercasestring = {string:String -> string.uppercase()}
+    println(uppercasestring("hello"))
+    val numbers = listOf(1,-2,3,-4,5,-6)
+    val positives = numbers.filter{x -> x>0}
+    val negatives = numbers.filter{x -> x<0}
+    println(positives)
+    println(negatives)
+    val number= listOf(1,-2,3,-4,5,-6)
+    val doubled = number.map{x->x*2}
+    val tripled = number.map{x->x*3}
+    println(doubled)
+    println(tripled)
+    println(uppercasestring("hello"))
+    val timesinminutes=listOf(2,10,15,1)
+    val min2sec = toseconds("minute")
+    val totaltimeinseconds=timesinminutes.map(min2sec).sum()
+    println("Total time is $totaltimeinseconds secs")
+    println({string:String -> string.uppercase()}("hello"))
+    println(listOf(1,2,3).fold(0,{x,item -> x+item}))
+    println(listOf(1,2,3).fold(0){x,item -> x+item})
+    val actions = listOf("title","year","author")
+    val prefix = "https://example.com/book-info"
+    val id=5
+    val urls = actions.map{action -> "$prefix/id/$action"}
+        println(urls)
+    repeatN(5){
+        println("hello")
+    }
+    
+}
